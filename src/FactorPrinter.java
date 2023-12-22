@@ -6,6 +6,8 @@ public class FactorPrinter {
                     System.out.println(i+" ");
                 }
             }
+
+
         } else {
             System.out.println("Invalid Value");
         }
