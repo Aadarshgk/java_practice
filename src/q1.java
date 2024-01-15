@@ -6,7 +6,7 @@ public class q1 {
         int count=1,sum=0,num;
         while(count<=5){
             try {
-                System.out.print("Enter number #" + count+":");
+                System.out.print("Enter number #" + count+": ");
                 num= in.nextInt();
                 sum+=num;
                 count++;
