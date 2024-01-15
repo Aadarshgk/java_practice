@@ -4,13 +4,15 @@ public class q1 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int count=1,sum=0,num;
+        String x;
         while(count<=5){
+            System.out.print("Enter number #" + count + ": ");
+            x = in.nextLine();
             try {
-                System.out.print("Enter number #" + count+": ");
-                num= in.nextInt();
+                num= Integer.parseInt(x);
                 sum+=num;
                 count++;
-            }catch(Exception e){
+            }catch(NumberFormatException e){
                 System.out.print("Invalid number");
             }
         }
