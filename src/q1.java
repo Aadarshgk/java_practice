@@ -13,7 +13,7 @@ public class q1 {
                 sum+=num;
                 count++;
             }catch(NumberFormatException e){
-                System.out.print("Invalid number");
+                System.out.print("Invalid number\n");
             }
         }
         System.out.println("The sum is:"+sum);
