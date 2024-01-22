@@ -15,6 +15,10 @@ public class Customer {
         return emailAddress;
     }
 
+    public Customer(String name, String emailAddress) {
+        this(name, 1000, emailAddress);
+    }
+
     public Customer(String name, int creditLimit, String emailAddress) {
         this.name = name;
         this.creditLimit = creditLimit;
