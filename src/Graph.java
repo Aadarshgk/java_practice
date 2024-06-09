@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class Graph {
+        private static Stack<Integer> stack = new Stack<>();
         private static Queue<Integer> q = new LinkedList<>();
         private static HashSet<Integer> set = new HashSet<>();
         private static ArrayList<Integer> res = new ArrayList<>();
@@ -31,6 +32,25 @@ public class Graph {
                 dfs(a,adjList);
             }
         }
+        stack.push(node);
+    }
+
+
+    public static void topologicalSort(List<List<Integer>> adjList) {
+        set.clear();
+        stack.clear();
+
+        for (int i = 1; i < adjList.size(); i++) {
+            if (!set.contains(i)) {
+                dfs(i, adjList);
+            }
+        }
+
+        System.out.println("Topological sorting order:");
+        while (!stack.isEmpty()) {
+            System.out.print(stack.pop()+ " ");
+        }
+        System.out.println();
     }
 
     public static void main(String[] args) {
@@ -67,9 +87,15 @@ public class Graph {
         set.clear();
 
         dfs(1,adjList);
+        System.out.println("DFS Traversal: ");
         for(Integer a: res){
             System.out.print(a +" ");
         }
         System.out.println();
+
+        set.clear();
+        res.clear();
+        topologicalSort(adjList);
+
     }
 }
