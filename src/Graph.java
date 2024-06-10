@@ -10,17 +10,23 @@ public class Graph {
         q.clear();
         res.clear();
 
-        q.add(1);
-        while(!q.isEmpty()){
-            Integer a=q.remove();
-            res.add(a);
-            for(Integer b: adjList.get(a)){
-                if(!set.contains(b)){
-                    set.add(b);
-                    q.add(b);
+        for(int i=1;i<adjList.size();i++){
+            if(!set.contains(i)){
+                q.add(i);
+                set.add(i);
+                while(!q.isEmpty()){
+                    Integer a=q.remove();
+                    res.add(a);
+                    for(Integer b: adjList.get(a)){
+                        if(!set.contains(b)){
+                            set.add(b);
+                            q.add(b);
+                        }
+                    }
                 }
             }
         }
+
         return res;
     }
 
