@@ -38,6 +38,11 @@ public class Graph {
                 dfs(a,adjList);
             }
         }
+        for (int i = 1; i < adjList.size(); i++) {
+            if (!set.contains(i)) {
+                dfs(i, adjList);
+            }
+        }
         stack.push(node);
     }
 
