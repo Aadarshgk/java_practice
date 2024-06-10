@@ -48,7 +48,7 @@ public class Graph {
 
     public static void dfsForAll(List<List<Integer>> adjList){
         for (int i = 1; i < adjList.size(); i++) {
-            if(!set.contains()){
+            if(!set.contains(i)){
                 dfs(i,adjList);
             }
         }
