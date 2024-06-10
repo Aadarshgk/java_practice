@@ -38,12 +38,20 @@ public class Graph {
                 dfs(a,adjList);
             }
         }
+//        for (int i = 1; i < adjList.size(); i++) {
+//            if (!set.contains(i)) {
+//                dfs(i, adjList);
+//            }
+//        }
+        stack.push(node);
+    }
+
+    public static void dfsForAll(List<List<Integer>> adjList){
         for (int i = 1; i < adjList.size(); i++) {
-            if (!set.contains(i)) {
-                dfs(i, adjList);
+            if(!set.contains()){
+                dfs(i,adjList);
             }
         }
-        stack.push(node);
     }
 
 
@@ -97,7 +105,7 @@ public class Graph {
         res.clear();
         set.clear();
 
-        dfs(1,adjList);
+        dfsForAll(adjList);
         System.out.println("DFS Traversal: ");
         for(Integer a: res){
             System.out.print(a +" ");
