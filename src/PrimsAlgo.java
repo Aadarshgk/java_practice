@@ -46,6 +46,7 @@ public class PrimsAlgo {
 
     public static void primAlgo(ArrayList<Edge>[] graph,ArrayList<Edge> res) {
         boolean[] vis = new boolean[graph.length];
+        @SuppressWarnings("unchecked")
         PriorityQueue<Edge> pq = new PriorityQueue<>(Comparator.comparingInt(e -> e.wt));
         for (int i = 0; i < graph[0].size(); i++) {
             pq.add(graph[0].get(i));
@@ -72,7 +73,7 @@ public class PrimsAlgo {
     }
 
     public static void main(String[] args) {
-        ArrayList<Edge> graph[] = new ArrayList[4];
+        ArrayList<Edge>[] graph = new ArrayList[4];
         createGraph(graph);
         ArrayList<Edge> res = new ArrayList<>();
         primAlgo(graph, res);
