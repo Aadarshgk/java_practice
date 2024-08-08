@@ -28,7 +28,7 @@ public class QuickSort {
 
 
     public static void quickSort1(int[] ar, int low, int high) {
-        if(low<=high){
+        if(low<high){
             int pivot=low;
             int i = low + 1, j = high;
             while (i <= j) {
