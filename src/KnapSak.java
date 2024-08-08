@@ -23,7 +23,7 @@ public class KnapSak {
         int row = ar.length;
         int col = ar[0].length-1;
         int i = row - 1;
-        while (i > 0 && maxProfit!=0) {
+        while (i > 0 && maxProfit>0) {
             if(ar[i][col]!=ar[i-1][col]){
                 res.add(i);
                 maxProfit -= profit[i - 1];
